@@ -1,0 +1,77 @@
+.control-console {
+  flex-grow: 1;
+  border: 2px solid black;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.control-console-capsules {
+  flex-grow: 1;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+.control-console-roadster {
+  flex-grow: 1;
+  padding: 10px;
+  border-top: 1px solid black;
+  display: flex;
+  align-items: flex-end;
+}
+
+.control-console-landing-pad {
+  flex-grow: 1;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  height: 30px;
+  border-right: 1px solid black;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 960px) {
+  .control-console {
+    margin: 0;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .control-console-capsules {
+    padding: 10px;
+    border-bottom: 0;
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .control-console-roadster {
+    padding: 10px;
+    border-top: 0;
+    border-left: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .control-console-landing-pad form {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  input {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+}
