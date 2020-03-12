@@ -1,13 +1,17 @@
-import React from 'react';
-import './App.css';
-import DisplayConsole from './DisplayConsole';
-import ControlConsole from './ControlConsole';
+import React from "react";
+import { Provider } from "react-redux";
+import "./App.css";
+import DisplayConsole from "./DisplayConsole";
+import ControlConsole from "./ControlConsole";
+import store from "./redux/store";
 
 export default () => {
   return (
-    <div className="app">
-      <DisplayConsole/>
-      <ControlConsole/>
-    </div>
+    <Provider store={store}>
+      <div className="app">
+        <DisplayConsole />
+        <ControlConsole />
+      </div>
+    </Provider>
   );
 };

@@ -7,7 +7,7 @@ const ControlConsole = props => {
   return (
     <div className="control-console">
       <div className="control-console-capsules">
-        <Button text="Capsules" onClick={props.onRoadsterClick} />
+        <Button text="Capsules" onClick={props.onCapsulesClick} />
       </div>
       <div className="control-console-landing-pad">
         <form>
@@ -28,7 +28,11 @@ const ControlConsole = props => {
         </form>
       </div>
       <div className="control-console-roadster">
-        <Button text="Roadster" onClick={props.onRoadsterClick} />
+        <Button
+          text="Roadster"
+          colorClassname={props.roadsterBtnColorClassname}
+          onClick={props.onRoadsterClick}
+        />
       </div>
     </div>
   );
@@ -41,7 +45,8 @@ ControlConsole.propTypes = {
   landingPadInputValue: PropTypes.string.isRequired,
   landingPadInputValidationClassname: PropTypes.string.isRequired,
   landingPadBtnValidationClassname: PropTypes.string.isRequired,
-  onRoadsterClick: PropTypes.func.isRequired
+  onRoadsterClick: PropTypes.func.isRequired,
+  roadsterBtnColorClassname: PropTypes.string.isRequired
 };
 
 export default ControlConsole;

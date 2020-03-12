@@ -1,1 +1,2 @@
-export { default } from './DisplayConsole'; 
+export { default } from "./DisplayConsoleContainer";
+export { default as displayConsoleReducer } from "./DisplayConsoleReducer";
