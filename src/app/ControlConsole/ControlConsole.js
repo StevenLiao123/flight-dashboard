@@ -10,20 +10,21 @@ const ControlConsole = props => {
         <Button text="Capsules" onClick={props.onCapsulesClick} />
       </div>
       <div className="control-console-landing-pad">
-        <form>
+        <form
+          onSubmit={e => {
+            e.preventDefault();
+          }}
+        >
           <input
             type="text"
             name="landing-pad"
-            value={props.landingPadInputValue}
-            className={props.landingPadInputValidationClassname}
             onChange={props.onLandingPadInputChange}
             maxLength="15"
             placeholder="text"
           />
           <Button
             text="Landing Pad"
-            className={props.landingPadBtnValidationClassname}
-            onClick={props.onLandingPadClick}
+            onClick={() => props.onLandingPadClick(props.landingPadInputValue)}
           />
         </form>
       </div>
@@ -43,8 +44,6 @@ ControlConsole.propTypes = {
   onLandingPadClick: PropTypes.func.isRequired,
   onLandingPadInputChange: PropTypes.func.isRequired,
   landingPadInputValue: PropTypes.string.isRequired,
-  landingPadInputValidationClassname: PropTypes.string.isRequired,
-  landingPadBtnValidationClassname: PropTypes.string.isRequired,
   onRoadsterClick: PropTypes.func.isRequired,
   roadsterBtnColorClassname: PropTypes.string.isRequired
 };

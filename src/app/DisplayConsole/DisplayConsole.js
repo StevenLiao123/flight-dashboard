@@ -10,7 +10,7 @@ const DisplayConsole = props => {
   );
 };
 
-DisplayConsole.displayText = {
+DisplayConsole.propTypes = {
   formattedData: PropTypes.string.isRequired
 };
 

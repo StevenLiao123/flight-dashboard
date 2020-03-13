@@ -8,6 +8,22 @@ button {
   font-weight: bold;
 }
 
+.orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
 button:active {
   transform: translateY(1px);
 }
